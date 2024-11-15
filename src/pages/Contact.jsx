@@ -6,6 +6,7 @@ import Fox from "../models/fox";
 
 import Loader from '../components/Loader';
 import useAlert from '../hooks/useAlert';
+import Alert from '../components/Alert';
 
 
 const Contact = () => {
@@ -38,7 +39,7 @@ const Contact = () => {
       import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
     ).then(() => {
       setIsLoading(false);
-      showAlert({show: true, text: 'Message send successfully!', type:'success'});
+      showAlert({show: true, text: 'Message send successfully! 😸', type:'success'});
       
       setTimeout(()=>{
         hideAlert();
@@ -58,6 +59,8 @@ const Contact = () => {
 
   return (
     <section className='relative flex lg:flex-row flex-col max-container'>
+    {alert.show && <Alert{...alert}/>}
+
       <div className='flex-1 min-w-[50%] flex flex-col'>
         <h1 className='head-text'>Get in Touch</h1>
         <form className='w-full flex flex-col gap-7 mt-14' onSubmit={handleSubmit}>

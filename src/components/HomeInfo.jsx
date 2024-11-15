@@ -17,7 +17,7 @@ const renderContext = {
         <h1 className='sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5'>
             Hi, I am <span className='font-semibold'>Akshit Kansal</span> 👋🏻
             <br/>
-            A Software Engineer from India
+            Step into my 360° interactive world!
         </h1>
     ),
     2:(
